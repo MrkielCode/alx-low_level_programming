@@ -1,7 +1,9 @@
 #include <stdio.h>
 /**
- *main - entry point
- *return: always 0 (success)
+ * main - Entry point
+ *
+ * Descriptiom: 'program for puts'
+ * Return: always 0 (success)
  */
 int main(void)
 {
