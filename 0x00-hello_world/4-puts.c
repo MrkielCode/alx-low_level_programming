@@ -1,7 +1,9 @@
 #include <stdio.h>
-int main()
+/**
+ *c Program to output words
+ */
+int main(viod)
 {
-puts("\"Programming is like building a multilingual puzzle\n");
-        return 0;
+	puts("\"Programming is like building a multilingual puzzle\n");
+	return (0);
 }
-       
