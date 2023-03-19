@@ -5,7 +5,7 @@
  * Description: 'print combo numbers'
  *
  * Return: Always 0 (success)
- */i
+ */
 
 int main(void)
 {
