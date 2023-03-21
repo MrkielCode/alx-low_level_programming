@@ -1,11 +1,8 @@
 #include "main.h"
 /**
- * main - Print Alphabet
+ *  print_alphabet - funtion prints alphabets
  *
- * Description: 'program to print alphabet using user define
- * header putchar'
- *
- * Return: Always 0 (success)
+ * Return: Always  0.
  */
 
 void print_alphabet(void)
