@@ -2,7 +2,7 @@
 /**
  * puts_half - function to print half of characters
  *
- * @str - parameter to be used
+ * @str:  parameter to be used
  *
  * Return: Always 0.
  */
@@ -20,6 +20,7 @@ void puts_half(char *str)
 	if (length % 2 == 1)
 	{
 		n = (length - 1) / 2;
+		length += 1;
 	}
 	else
 	{
