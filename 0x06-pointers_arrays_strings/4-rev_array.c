@@ -1,5 +1,6 @@
+#include "main.h"
 /**
- * print_array - function to reverse array
+ * reverse_array - function to reverse array
  * @a: array parameter
  * @n: index
  * Return: Always TRUE
