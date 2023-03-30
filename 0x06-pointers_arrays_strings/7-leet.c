@@ -12,7 +12,7 @@ char *leet(char *str)
 	i = 0;
 	while (str[i] != '\0')
 	{
-		for (j = 0; j < 9; j++)
+		for (j = 0; s1[j] != '\0'; j++)
 		{
 			if (str[i] == s1[j])
 				str[i] = s2[j];
