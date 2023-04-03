@@ -1,21 +1,20 @@
 #include "main.h"
 /**
- * _memcpy - this function copy a memory in another variable
- * @dest:  destination parameter of the string
- * @src: source parameter of the string
+ * _memset - this function to set a momery to constant
+ * @s: source parameter
+ * @b: constant parameter
  * @n: length of the string
- * Return: Always dest
+ * Return: Always src
  */
 
-char *_memcpy(char *dest, char *src, unsigned int n)
+char *_memset(char *s, char b, unsigned int n)
 {
 	unsigned int k;
-	char *d = (char *) dest;
-	char *s = (char *) src;
+	char *src = (char *)s;
 
 	for (k = 0; k < n; k++)
 	{
-		d[k] = s[k];
+		src[k] = b;
 	}
-	return (d);
+	return (src);
 }
