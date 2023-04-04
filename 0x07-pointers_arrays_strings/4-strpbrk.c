@@ -8,32 +8,35 @@
 
 char *_strchr(char *s, char c)
 {
-        int counter = 0;
+	int counter = 0;
 
-        while (s[counter] != '\0')
-        {
-                if (s[counter] == c)
-                        return (s + counter);
-                counter++;
-        }
-        return (NULL);
+	while (s[counter] != '\0')
+	{
+		if (s[counter] == c)
+			return (s + counter);
+		counter++;
+	}
+	return (NULL);
 }
-
 /**
  * _strpbrk - function to be executed
  * @s: parameter to be scanned
  * @accept: parameter to be match
- * Return: Always null
+ * Return: Always NULL
  */
 
 char *_strpbrk(char *s, char *accept)
 {
 	while (*s)
 	{
-		if (_strchr(accept,*s))
-			return s;
+		if (_strchr(accept, *s))
+		{
+			return (s);
+		}
 		else
+		{
 			s++;
+		}
 	}
 	return (NULL);
 }
