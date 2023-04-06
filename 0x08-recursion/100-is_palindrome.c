@@ -26,7 +26,7 @@ int _strlen(char *s)
 	return (0);
 }
 
-/*
+/**
  * performPalindrome - to compare strings
  * @s: string to be compared
  * @l: left index of the string
