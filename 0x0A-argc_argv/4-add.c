@@ -16,8 +16,7 @@ int main(int argc, char *argv[])
 	{
 		for (count = 1; count < argc; count++)
 		{
-			if ((*argv[count] >= 'a' && (*argv[count] <= 'z')) ||
-					(*argv[count] >= 'A' && *argv[count] <= 'Z'))
+			if (*argv[count] < 48 || *argv[count] > 57)
 			{
 				printf("Error\n");
 				return (1);
