@@ -3,21 +3,20 @@
 #include <stdio.h>
 /**
  * main - Entry point
- * @argc: argument count
+ * @argc: arguiment count
  * @argv: argument variables
  * Return: Always 0.
  */
 
 int main(int argc, char *argv[])
 {
-	if (argc > 1)
+	int a = 0;
+	int b = 0;
+	if (argc > 1 && argc < 4)
 	{
-		int a = atoi(argv[1]);
-		int b = atoi(argv[2]);
-		int res;
-
-		res = a * b;
-		printf("%d\n", res);
+		a = atoi(argv[1]);
+		b = atoi(argv[2]);
+		printf("%d\n", a * b);
 	}
 	else
 	{
