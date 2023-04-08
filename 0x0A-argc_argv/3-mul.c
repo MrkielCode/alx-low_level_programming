@@ -14,16 +14,14 @@ int main(int argc, char *argv[])
 
 	if (argc > 1 && argc < 4)
 	{
-	for (i = 1; i < argc; i++)
-	{
-		res *= atoi(argv[i]);
-	}
-	printf("%d\n", res);
-	return (0);
+		for (i = 1; i < argc; i++)
+			res *= atoi(argv[i]);
+		printf("%d\n", res);
+		return (0);
 	}
 	else
 	{
-	printf("Error\n");
-	return (1);
+		printf("Error\n");
+		return (1);
 	}
 }
