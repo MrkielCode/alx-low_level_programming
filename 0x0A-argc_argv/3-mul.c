@@ -1,0 +1,28 @@
+#include "main.h"
+#include <stdlib.h>
+#include <stdio.h>
+/**
+ * main - Entry point
+ * @argc: argument count
+ * @argv: argument variables
+ * Return: Always 0.
+ */
+
+int main(int argc, char *argv[])
+{
+	int res, i;
+
+	if (argc > 1)
+	{
+	for (i = 0; i < argc; i++)
+	{
+		res = atoi(argv[i]) + atoi(argv[i]);
+	}
+	printf("%d\n", res);
+	}
+	else
+	{
+		printf("Error\n");
+	}
+	return (0);
+}
