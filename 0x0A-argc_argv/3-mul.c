@@ -10,12 +10,12 @@
 
 int main(int argc, char *argv[])
 {
-	int res = 1, i;
-
-	if (argc > 1 && argc < 4)
+	if (argc > 1)
 	{
-		for (i = 1; i < argc; i++)
-			res *= atoi(argv[i]);
+		int a = atoi(argv[1]);
+		int b = atoi(argv[2]);
+		int res;
+		res = a * b;
 		printf("%d\n", res);
 		return (0);
 	}
