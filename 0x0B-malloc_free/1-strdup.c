@@ -16,16 +16,13 @@ char *_strdup(char *str)
 	if (str == NULL)
 		return (NULL);
 
-	strCopy = (char *)malloc(sizeof(str) + 1);
+	strCopy = (char *)malloc(strlen(str) + 1);
 
-	if(strCopy == NULL)
-		return NULL;
+	if (strCopy == NULL)
+		return (NULL);
 
 	for (i = 0; str[i]; i++)
 	{
-
-		if (str == NULL)
-			return (NULL);
 		strCopy[i] = str[i];
 	}
 
