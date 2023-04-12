@@ -26,10 +26,11 @@ char *argstostr(int ac, char **av)
 	counter1 = 0;
 	while (counter1 < ac)
 	{
-		for (counter2 = 0; av[counter1][counter2] != '\0'; counter2++)
+		for (counter2 = 0; av[counter1][counter2]; counter2++)
 			conStr[j++] = av[counter1][counter2];
 		conStr[j++] = '\n';
 		counter1++;
 	}
+	conStr[j] = '\0';
 	return (conStr);
 }
