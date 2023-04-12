@@ -19,9 +19,9 @@ char *argstostr(int ac, char **av)
 	if (ac == 0 || av == NULL)
 		return (NULL);
 	for (counter1 = 0; counter1 < ac; counter1++)
-		len += strlen(av[counter1]);
+		len += strlen(av[counter1] + 1);
 
-	conStr = malloc(sizeof(char) * len + 1);
+	conStr = malloc(sizeof(char) * len);
 	if (conStr == NULL)
 		return (NULL);
 
@@ -33,6 +33,5 @@ char *argstostr(int ac, char **av)
 		conStr[j++] = '\n';
 		counter1++;
 	}
-	conStr[j] = '\0';
 	return (conStr);
 }
