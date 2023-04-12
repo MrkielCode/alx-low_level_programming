@@ -13,13 +13,15 @@ char *argstostr(int ac, char **av)
 	int counter1, counter2, len, j;
 	char *conStr;
 
-	len = j = 0;
+	len = 0;
+	j = 0;
+
 	if (ac == 0 || av == NULL)
 		return (NULL);
 	for (counter1 = 0; counter1 < ac; counter1++)
-		len += strlen(av[counter1] + 1);
+		len += strlen(av[counter1]);
 
-	conStr = malloc(sizeof(char) * len);
+	conStr = malloc(sizeof(char) * len + 1);
 	if (conStr == NULL)
 		return (NULL);
 
