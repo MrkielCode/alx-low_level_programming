@@ -42,6 +42,6 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		mem[i] = s2[j];
 	}
-	mem[i] = '\0';
+	mem[i++] = '\0';
 	return (mem);
 }
