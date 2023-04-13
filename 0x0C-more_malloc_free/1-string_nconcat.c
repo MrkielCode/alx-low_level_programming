@@ -1,47 +1,45 @@
-#include "main.h"
 #include <stdlib.h>
 #include <string.h>
 
-/**
- * string_nconcat - function to concatenate
- * @s1: destination string
- * @s2: source string
- * @n: limits
- * Return: S1 or NULL
- */
-
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	char *mem;
-	unsigned int s1_len;
-	unsigned int s2_len;
-	unsigned int i, j;
+    char *result;
+    unsigned int s1_len, s2_len, result_len;
 
-	if (s1 == NULL)
-		s1 = "";
-	if (s2 == NULL)
-		s2 = "";
+    // Handle NULL inputs
+    if (s1 == NULL) {
+        s1 = "";
+    }
+    if (s2 == NULL) {
+        s2 = "";
+    }
 
-	s1_len = strlen(s1);
-	s2_len = strlen(s2);
+    s1_len = strlen(s1);
+    s2_len = strlen(s2);
 
-	if (n >= s1_len)
-		mem = malloc((s1_len + s2_len + 1) * sizeof(char));
-	else
-		mem = malloc((s1_len + n + 1) * sizeof(char));
+    // Adjust n if necessary
+    if (n > s2_len) {
+        n = s2_len;
+    }
 
-	if (mem == NULL)
-		return (NULL);
+    // Compute length of result string
+    result_len = s1_len + n;
 
-	for (i = 0; n >= s1_len ? s1[i] != '\0' : s1[i] && i < n; i++)
-	{
-		mem[i] = s1[i];
-	}
+    // Allocate memory for result string
+    result = (char *) malloc(result_len + 1);
 
-	for (j = 0; s2[j] && j < n; j++, i++)
-	{
-		mem[i] = s2[j];
-	}
-	mem[i++] = '\0';
-	return (mem);
+    if (result == NULL) {
+        return NULL;
+    }
+
+    // Copy s1 into result
+    memcpy(result, s1, s1_len);
+
+    // Copy up to n bytes of s2 into result
+    memcpy(result + s1_len, s2, n);
+
+    // Add null terminator
+    result[result_len] = '\0';
+
+    return result;
 }
