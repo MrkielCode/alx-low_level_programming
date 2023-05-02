@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include "lists.h"
 /**
- * print_listint_safe - prints a linked list
+ * print_listint_safe - prints linked list
  * @head: pointer to linked list
  * Return: number of nodes in the list
  */
@@ -12,7 +12,7 @@ size_t print_listint_safe(const listint_t *head)
 	const listint_t *current;
 	size_t counter = 0;
 
-	if (!head)
+	if (!head || !*head)
 		exit(98);
 
 	while (head)
@@ -30,4 +30,3 @@ size_t print_listint_safe(const listint_t *head)
 	}
 	return (counter);
 }
-
