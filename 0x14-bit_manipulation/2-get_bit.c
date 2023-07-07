@@ -15,7 +15,7 @@ int get_bit(unsigned long int n, unsigned int index)
 		return (-1);
 
 	mk = 1UL << index;
-	bitvalues(n & mk) != 0;
+	bitvalues = (n & mk) != 0;
 
 	return (bitvalues);
 
