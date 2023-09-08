@@ -10,25 +10,28 @@
 void hash_table_print(const hash_table_t *ht)
 {
 	unsigned long int counter;
+	char flag = 0;
 
-	int flag = 0;
+	hash_node_t *track;
 
-	if (ht == NULL)
+
+	if (ht == NULL || ht->array == NULL)
 		return;
 
 	printf("{");
+
 		for (counter = 0; counter < ht->size; counter++)
 		{
-			hash_node_t *track = ht->array[counter];
+			track = ht->array[counter];
 
 			if (track != NULL)
 			{
-				if (flag == 0)
+				if (flag == 1)
 					printf(", ");
 
 				printf("'%s': '%s'", track->key, track->value);
 
-				flag = 0;
+				flag = 1;
 
 				track = track->next;
 			}
